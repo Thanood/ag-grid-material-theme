@@ -27,6 +27,8 @@ $row-selected = rgba(238, 238, 238, 1)
     overflow: hidden
     padding-left: 24px
     padding-right: 56px
+    text-align: right // numbers
+    //text-align: left // text
     top: -1px
     white-space: nowrap
 
@@ -65,7 +67,8 @@ $row-selected = rgba(238, 238, 238, 1)
 
   .ag-header-cell
     border-right: 1px solid $default-border
-    text-align: left
+    text-align: right // numbers
+    //text-align: left // text
 
   .ag-header-cell-moving .ag-header-cell-label
     // opacity: $header-fg-opacity
@@ -121,7 +124,7 @@ $row-selected = rgba(238, 238, 238, 1)
     //background: linear-gradient(#feffff, #eff2f7);
 
   .ag-header-icon
-    color: #fff;
+    // color: #fff;
     stroke: #fff;
     fill: #fff;
 
@@ -262,3 +265,29 @@ $row-selected = rgba(238, 238, 238, 1)
   .ag-visible-icons
     padding-left: 2px
     padding-right: 2px
+
+  .ag-header-icon
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    // display: inline-block !important;
+    display: inline-block
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+
+  .ag-sort-ascending-icon:after
+    content: 'keyboard_arrow_up'
+    line-height: inherit
+
+  .ag-sort-descending-icon:after
+    content: 'keyboard_arrow_down'
+    line-height: inherit

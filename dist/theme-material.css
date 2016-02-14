@@ -9,6 +9,7 @@
   overflow: hidden;
   padding-left: 24px;
   padding-right: 56px;
+  text-align: right;
   top: -1px;
   white-space: nowrap;
 }
@@ -50,7 +51,7 @@
 }
 .ag-material .ag-header-cell {
   border-right: 1px solid transparent;
-  text-align: left;
+  text-align: right;
 }
 .ag-material .ag-header-cell-moving-clone {
   background-color: rgba(91,155,213,0.8);
@@ -101,7 +102,6 @@
 /* When using bootstrap, box-sizing was set to 'border-box' */
 }
 .ag-material .ag-header-icon {
-  color: #fff;
   stroke: #fff;
   fill: #fff;
 }
@@ -249,4 +249,29 @@
 .ag-material .ag-visible-icons {
   padding-left: 2px;
   padding-right: 2px;
+}
+.ag-material .ag-header-icon {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+.ag-material .ag-sort-ascending-icon:after {
+  content: 'keyboard_arrow_up';
+  line-height: inherit;
+}
+.ag-material .ag-sort-descending-icon:after {
+  content: 'keyboard_arrow_down';
+  line-height: inherit;
 }

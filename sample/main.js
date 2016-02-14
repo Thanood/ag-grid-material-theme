@@ -11,6 +11,7 @@ var gridOptions = {
         {headerName: 'Value 1', field: 'value1'},
         {headerName: 'Value 2', field: 'value2'}
     ],
+    enableSorting: true,
     rowData: [],
     onGridReady: function(params) {
         params.api.sizeColumnsToFit();
