@@ -6,14 +6,17 @@ var eGridContainer = document.querySelector('#gridContainer');
 
 var gridOptions = {
     columnDefs: [
-        {displayName: 'Record', field: 'recordNumber'},
-        {displayName: 'Value 1', field: 'value1'},
-        {displayName: 'Value 2', field: 'value2'}
+        {headerName: '', checkboxSelection: true, cellClass: 'ag-grid-checkbox-column', width: 60 },
+        {headerName: 'Record', field: 'recordNumber'},
+        {headerName: 'Value 1', field: 'value1'},
+        {headerName: 'Value 2', field: 'value2'}
     ],
     rowData: [],
     onGridReady: function(params) {
         params.api.sizeColumnsToFit();
-    }
+    },
+    rowHeight: 48,
+    headerHeight: 56
 };
 
 for (var i = 0; i<100; i++) {

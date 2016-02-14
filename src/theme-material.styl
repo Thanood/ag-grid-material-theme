@@ -1,72 +1,101 @@
 @import 'nib'
 
+$default-border = transparent
+// $default-border = rgba(238, 238, 238, .75)
+$cell-fg = rgba(0, 0, 0, .87)
+$cell-focus-bg = rgba(255, 255, 255, 1)
+$cell-focus-border = #217346
+$cell-no-focus-border = rgba(238, 238, 238, 1)
+$header-bg = rgba(255, 255, 255, 1)
+$header-cell-moving-bg = #9bc2e6
+$header-container-border = rgba(238, 238, 238, 1)
+$header-fg = rgba(0, 0, 0, .54)
+$row-even-bg = rgba(255, 255, 255, 1)
+$row-odd-bg = rgba(238, 238, 238, .3)
+$row-hover = rgba(245, 245, 245, 1)
+$row-selected = rgba(238, 238, 238, 1)
+
 .ag-material
   .ag-root
-    border: 1px solid #9bc2e6;
-    font: 10pt Calibri, "Segoe UI", Thonburi, Arial, Verdana, sans-serif;
+    border: 1px solid $default-border
+    font: 13px 'Roboto', sans-serif;
 
   .ag-cell
-    top: -1px;
-    padding-left: 2px;
-    padding-right: 2px;
-    overflow: hidden;
-    white-space: nowrap;
-    letter-spacing: -0.02em;
+    color: $cell-fg
+    letter-spacing: -.02em
+    line-height: 48px
+    overflow: hidden
+    padding-left: 24px
+    padding-right: 56px
+    top: -1px
+    white-space: nowrap
+
+  .ag-cell.ag-grid-checkbox-column
+    padding-right: 24px
 
   .ag-column-moving .ag-cell
-    transition: left 0.2s;
+    transition: left .2s
 
   .ag-cell-focus
-    background: #fff;
-    border: 2px solid #217346;
+    background: $cell-focus-bg
+    border: 2px solid $cell-focus-border
 
   .ag-cell-no-focus
-    border-right: 1px dotted #9bc2e6;
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
-    border-bottom: 1px solid #9bc2e6;
+    border-bottom: 1px solid $cell-no-focus-border
+    border-left: 2px solid transparent
+    border-right: 1px dotted $default-border
+    border-top: 2px solid transparent
 
   .ag-cell-first-right-pinned
-    border-left: 1px dotted #9bc2e6;
+    border-left: 1px dotted $default-border
 
   .ag-header
-    background-color: #5B9BD5;
-    border-bottom: 1px solid #9BC2E6;
+    background-color: $header-bg
+    border-bottom: 1px solid $default-border
+
+  .ag-header-row
+    line-height: 56px
+
+  .ag-header-container
+    border-bottom: 1px solid $header-container-border
 
   .ag-no-scrolls .ag-header-container
-    background-color: #5B9BD5;
-    border-bottom: 1px solid #9BC2E6;
+    background-color: $header-bg
+    // border-bottom: 1px solid $header-container-border
 
   .ag-header-cell
-    border-right: 1px solid #9BC2E6;
+    border-right: 1px solid $default-border
+    text-align: left
 
   .ag-header-cell-moving .ag-header-cell-label
-    opacity: 0.0;
+    // opacity: $header-fg-opacity
 
   .ag-header-cell-moving-clone
-    border-right: 1px solid grey;
-    border-left: 1px solid grey;
-    background-color:rgba(91, 155, 213, 0.8);
+    background-color:rgba(91, 155, 213, .8)
+    border-left: 1px solid grey
+    border-right: 1px solid grey
 
   .ag-header-cell-moving
-    background-color #9bc2e6;
+    background-color: $header-cell-moving-bg
 
   .ag-header-group-cell
-    border-right: 1px solid #9BC2E6;
+    border-right: 1px solid $default-border
 
   .ag-header-group-cell-with-group
-    border-bottom: 1px solid #9BC2E6;
+    border-bottom: 1px solid $default-border
 
   .ag-pinned-right-header
-    border-left: 1px solid #9BC2E6;
+    border-left: 1px solid $default-border
 
   .ag-header-cell-label
-    padding: 4px 2px 4px 2px;
-    font-weight: bold;
-    color: #ffffff;
+    // padding: 4px 2px 4px 2px
+    color: $header-fg
+    font-size: 13px
+    font-weight: bold
 
   .ag-header-cell-text
-    padding-left: 2px;
+    padding-left: 24px
+    padding-right: 56px
 
   .ag-header-group-cell-label
     padding: 4px;
@@ -99,11 +128,14 @@
   .ag-dark .ag-header-expand-icon:hover
     cursor: pointer;
 
+  .ag-row:hover
+    background-color: $row-hover
+
   .ag-row-odd
-    background-color: #DDEBF7;
+    background-color: $row-odd-bg
 
   .ag-row-even
-    background-color: #fff;
+    background-color: $row-even-bg
 
   .ag-overlay-loading-wrapper
     background-color: rgba(255, 255, 255, 0.5);
@@ -118,7 +150,7 @@
     background-color: #fafafa;
 
   .ag-row-selected
-    background-color: #c7c7c7;
+    background-color: $row-selected
 
   .ag-group-cell-entire-row
     background-color: #fff;
