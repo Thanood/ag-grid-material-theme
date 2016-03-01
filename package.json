@@ -1,7 +1,8 @@
 {
   "name": "ag-grid-material-theme",
   "version": "0.0.1",
-  "description": "",
+  "description": "A theme for ag-grid based on Google Material Design",
+  "repository": "https://github.com/Thanood/ag-grid-material-theme",
   "main": "dist/theme-material.css",
   "scripts": {
     "start": "concurrent \"gulp watch\" \"live-server --open=sample --ignore=src --watch=dist\""
